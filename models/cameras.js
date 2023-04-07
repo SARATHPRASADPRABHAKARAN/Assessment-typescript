@@ -22,15 +22,13 @@ Camera.init({
     },
     url: {
         type: sequelize_1.DataTypes.STRING(100),
-        unique: true,
         allowNull: false,
     },
     deletedAt: {
         type: sequelize_1.DataTypes.DATE,
-        unique: true,
-        allowNull: false,
     },
 }, {
     sequelize: sequelize_2.sequelize,
     tableName: 'cameras',
 });
+sequelize_2.sequelize.sync();

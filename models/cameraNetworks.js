@@ -22,14 +22,13 @@ CameraNetworks.init({
     },
     cameras: {
         type: sequelize_1.DataTypes.INTEGER,
-        unique: true,
         allowNull: false,
     },
     deletedAt: {
-        type: sequelize_1.DataTypes.DATE,
-        allowNull: false,
+        type: sequelize_1.DataTypes.DATE
     },
 }, {
     sequelize: sequelize_2.sequelize,
     tableName: 'cameranetworks',
 });
+sequelize_2.sequelize.sync();

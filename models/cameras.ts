@@ -28,13 +28,11 @@ Camera.init(
     },
     url: {
       type: DataTypes.STRING(100),
-      unique: true,
       allowNull: false,
     },
     deletedAt: {
       type: DataTypes.DATE,
-      unique: true,
-      allowNull: false,
+      
     },
   },
   {
@@ -44,3 +42,4 @@ Camera.init(
 );
 
 export { Camera };
+sequelize.sync();

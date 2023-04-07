@@ -28,12 +28,11 @@ CameraNetworks.init(
     },
     cameras: {
       type: DataTypes.INTEGER,
-      unique: true,
       allowNull: false,
     },
     deletedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
+      type: DataTypes.DATE
+     
     },
   },
   {
@@ -43,3 +42,4 @@ CameraNetworks.init(
 );
 
 export { CameraNetworks };
+sequelize.sync();
